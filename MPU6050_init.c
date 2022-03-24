@@ -24,13 +24,13 @@ void MPU6050_Init (void)
 		Data = 0x00;
 		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, GYRO_CONFIG_REG, 1, &Data, 1, 1000);	//± 250 °/s gyroscope scale (131 LSB/°/s sensitivity) Gx = Gyro_X_RAW/131.0;
 		Data = DLPF_20Hz;
-		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, DLPF_CFG, 1, &Data, 1, 1000);			//20Hz LPF, 1kHz gyro data rate
+		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, DLPF_CFG, 1, &Data, 1, 1000);		//20Hz LPF, 1kHz gyro data rate
 		Data = 0x00;
-		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, SMPLRT_DIV_REG, 1, &Data, 1, 1000);		//data rate 8kHz (changed to 1kHz because of LPF enabled)
+		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, SMPLRT_DIV_REG, 1, &Data, 1, 1000);	//data rate 8kHz (changed to 1kHz because of LPF enabled)
 		Data = 0x00;
-		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, INT_PIN_CFG, 1, &Data, 1, 1000);		//interrupt configurations
+		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, INT_PIN_CFG, 1, &Data, 1, 1000);	//interrupt configurations
 		Data = DATA_EN_INT;
-		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, INT_ENABLE, 1, &Data, 1, 1000);			//enable 'data ready' interrupt
+		HAL_I2C_Mem_Write(&hi2c1, MPU6050_ADDR, INT_ENABLE, 1, &Data, 1, 1000);		//enable 'data ready' interrupt
 	}
 }
 
