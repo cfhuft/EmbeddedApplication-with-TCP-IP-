@@ -12,9 +12,9 @@
 #include <stdbool.h>
 
 static const uint32_t destination_ip_address = 3232235636;	//192.168.0.116
-static const uint8_t source_ip_address = 0x1e;				// .30 (192.168.0.30)
+static const uint8_t source_ip_address = 0x1e;			// .30 (192.168.0.30)
 static const uint16_t TCP_source_port = 54000;
-static const uint8_t packet_data_size = 4;					//incoming and outgoing data in packets will be 4 Bytes
+static const uint8_t packet_data_size = 4;			//incoming and outgoing data in packets will be 4 Bytes
 
 
 /*TCP FLAGS*/
